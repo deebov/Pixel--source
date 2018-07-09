@@ -6,3 +6,23 @@ block content
   
 
   header.header
+    .wrapper
+      nav.header__nav
+        ul.header__nav-list
+          each navItem in ['Home', 'About', 'Works', 'Contact']
+            li.header__nav-item
+              a(href="#").header__nav-link= navItem
+      //- nav.socials.header__socials
+      //-   ul.socials__list
+      //-     li.socials__item
+      //-       a(href="#").socials__link
+      main.header__content
+        .header__box
+          p.header__text Hey!
+          p.header__text I am
+          h1.heading.header__heading Deebov
+        .header__box
+          p.header__text I am also
+          h1.heading.header__heading Younger
+          h1.heading.header__heading Enthusiast
+          h1.heading.header__heading Programmer
