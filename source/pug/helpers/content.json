@@ -1,3 +1,77 @@
 {
-  
+  "techSkills": [
+    {
+      "name": "HTML5"
+    },
+    {
+      "name": "CSS3"
+    },
+    {
+      "name": "JavaScript",
+      "accent": true
+    },
+    {
+      "name": "ES6",
+      "accent": true
+    },
+    {
+      "name": "ES7"
+    },
+    {
+      "name": "ES8"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "GitHub"
+    },
+    {
+      "name": "Terminal"
+    },
+    {
+      "name": "CSS Flexbox Layout"
+    },
+    {
+      "name": "CSS Grid Layout"
+    },
+    {
+      "name": "SASS"
+    },
+    {
+      "name": "Pug"
+    },
+    {
+      "name": "Node.js"
+    },
+    {
+      "name": "npm"
+    },
+    {
+      "name": "yarn"
+    },
+    {
+      "name": "MongoDB"
+    },
+    {
+      "name": "Gulp"
+    },
+    {
+      "name": "Webpack",
+      "accent": true
+    },
+    {
+      "name": "Babel",
+      "accent": true
+    },
+    {
+      "name": "BEM"
+    },
+    {
+      "name": "Python(basics)"
+    },
+    {
+      "name": "telegram-bot"
+    }
+  ]
 }
