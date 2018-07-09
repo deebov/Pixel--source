@@ -19,3 +19,36 @@
     content: ''
     display: block
     clear: both
+
+@mixin respond($breakpoint)
+
+  @if $breakpoint == 'mobile-s'
+    @media(max-width: 320px)
+      @content
+  @if $breakpoint == 'mobile-m'
+    @media(max-width: 375px)
+      @content
+  @if $breakpoint == 'mobile-l'
+    @media(max-width: 425px)
+      @content
+  @if $breakpoint == 'tablet'
+    @media(max-width: 768px)
+      @content
+  @if $breakpoint == 'tab-port'
+    @media(max-width: 900px)
+      @content
+  @if $breakpoint == 'laptop'
+    @media(max-width: 1024px)
+      @content
+  @if $breakpoint == 'tab-land'
+    @media(max-width: 1200px)
+      @content
+  @if $breakpoint == 'laptop-l'
+    @media(max-width: 1440px)
+      @content
+  @if $breakpoint == 'big-desktop'
+    @media(max-width: 1800px)
+      @content
+  @else
+    @media(max-width: $breakpoint)
+      @content
