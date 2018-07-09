@@ -26,3 +26,24 @@ block content
           h1.heading.header__heading Younger
           h1.heading.header__heading Enthusiast
           h1.heading.header__heading Programmer
+  main.main-content
+    .about
+      .wrapper
+        h1.heading.about__title About
+        p.about__text I'm Deebov and I'm 17 y.o
+        p.about__text I'm Full-stack developer whose programming is his life
+        p.about__text 
+          | You can see my general resume 
+          a(href="#").about__link here
+          |  or download 
+          a(href="#").about__link here
+        .tech-skills.about__tech-skills
+          h2.heading My tech skills
+          ul.tech-skills__list
+            each skill in techSkills
+              li(class='tech-skills__item' + (skill.accent ? ' tech-skills__item--accent' : '')) #{skill.name} /
+        .list.about__skills
+          h1.heading.list__heading Professional and Personal skills
+          ul.list__list
+            each skill in ['Enthusiast', 'Responsible', 'Writing clean and reusable code', 'Responsive and Cross-browser design']
+              li.list__item= skill
