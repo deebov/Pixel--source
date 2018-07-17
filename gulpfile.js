@@ -10,6 +10,7 @@ global.$ = {
   gp: require('gulp-load-plugins')(),
   argv: require('yargs').argv,
   del: require('del'),
+  uglify: require('gulp-uglify-es').default,
   bowerFiles: require('main-bower-files')
 };
 
@@ -20,7 +21,7 @@ $.path.task.forEach(function(task) {
 
 $.gulp.task('default', $.gulp.series(
   'clean',
-  $.gulp.parallel('pug', 'sass', 'copy:image', 'copy:fonts'),
+  $.gulp.parallel('pug', 'sass', 'js', 'copy:image', 'copy:fonts'),
   'inject',
   $.gulp.parallel('watcher', 'serve')
 ));
