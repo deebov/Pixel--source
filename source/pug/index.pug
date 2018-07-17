@@ -4,7 +4,7 @@ extends ./helpers/base_layout
 
 block content
   
-  .loader
+  .loader#loader
     .loader__content
       .loader__procces
         .loader__loader
@@ -64,7 +64,7 @@ block content
           h1.heading.list__heading Works
           ul.list__list
             li.list__item
-              a(href="#").link Natours 
+              a(href="#").link.works__link Natours 
               .modal
                 .modal__top 
                   | Natours - fully responsive, modern and cross-browser HTML site
@@ -74,11 +74,11 @@ block content
                   p.modal__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta a eum minima autem quisquam. Eveniet blanditiis at officia amet et fuga atque eos cum voluptatibus aperiam ea eum, molestias veritatis.
                   a(href="#").modal__btn See
             li.list__item
-              a(href="#").link Trello
+              a(href="#").link.works__link Trello
             li.list__item
-              a(href="#").link Forkify
+              a(href="#").link.works__link Forkify
             li.list__item
-              a(href="#").link Sting
+              a(href="#").link.works__link Sting
 
     .contacts#contacts
       .wrapper
