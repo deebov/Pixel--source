@@ -31,7 +31,7 @@
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.1",
     "gulp-sass-glob": "^1.0.9",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.4",
     "main-bower-files": "^2.13.1",
     "yargs": "^11.0.0"
   },
