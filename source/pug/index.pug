@@ -4,14 +4,24 @@ extends ./helpers/base_layout
 
 block content
   
-
+  .loader
+    .loader__content
+      .loader__procces
+        .loader__loader
+          .loader__shape
+          .loader__shape
+          .loader__shape
+      .loader__text loading
   header.header
     .wrapper
       nav.header__nav
         ul.header__nav-list
-          each navItem in ['Home', 'About', 'Works', 'Contact']
-            li.header__nav-item
-              a(href="#").header__nav-link= navItem
+          li.header__nav-item
+            a(href="#about").header__nav-link About
+          li.header__nav-item
+            a(href="#works").header__nav-link Works
+          li.header__nav-item
+            a(href="#contacts").header__nav-link Contacts
       //- nav.socials.header__socials
       //-   ul.socials__list
       //-     li.socials__item
@@ -27,7 +37,7 @@ block content
           h1.heading.header__heading Enthusiast
           h1.heading.header__heading Programmer
   main.main-content
-    .about
+    .about#about
       .wrapper
         h1.heading.about__title About
         p.about__text I'm Deebov and I'm 17 y.o
@@ -48,42 +58,46 @@ block content
             each skill in ['Enthusiast', 'Responsible', 'Writing clean and reusable code', 'Responsive and Cross-browser design']
               li.list__item= skill
 
-    .works
+    .works#works
       .wrapper
-        h1.heading.works__title Works
-        .works__container
-          .row
-            .col.col-1-of-3
-              .works__work
-                span.works__view View more
-                img(src="assets/img/bandicam 2018-07-16 03-20-13-809.jpg", alt="").works__image         
-            .col.col-1-of-3
-              .works__work
-                span.works__view View more
-                img(src="assets/img/bandicam 2018-07-16 03-20-13-809.jpg", alt="").works__image         
-            .col.col-1-of-3
-              .works__work
-                span.works__view View more
-                img(src="assets/img/bandicam 2018-07-16 03-20-13-809.jpg", alt="").works__image         
+        .list.works__list
+          h1.heading.list__heading Works
+          ul.list__list
+            li.list__item
+              a(href="#").link Natours 
+              .modal
+                .modal__top 
+                  | Natours - fully responsive, modern and cross-browser HTML site
+                  .modal__close x
+                .modal__content
+                  img(src="assets/img/bandicam 2018-07-16 03-20-13-809.jpg", alt="").modal__img
+                  p.modal__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta a eum minima autem quisquam. Eveniet blanditiis at officia amet et fuga atque eos cum voluptatibus aperiam ea eum, molestias veritatis.
+                  a(href="#").modal__btn See
+            li.list__item
+              a(href="#").link Trello
+            li.list__item
+              a(href="#").link Forkify
+            li.list__item
+              a(href="#").link Sting
 
-
-    .contacts
+    .contacts#contacts
       .wrapper
         .list.contacts__list
           h1.heading.list__heading Contacts
           ul.list__list
             li.list__item 
               | Email: 
-              a(href="#").contacts__link deebov@yandex.com
+              a(href="#").link.contacts__link deebov@yandex.com
               
             li.list__item Phone: +998 99 753 55 46
             li.list__item 
-              a(href="#").contacts__link LinkedIn
+              a(href="#").link.contacts__link LinkedIn
             li.list__item 
-              a(href="#").contacts__link GitHub
+              a(href="#").link.contacts__link GitHub
             li.list__item 
-              a(href="#").contacts__link Codepen
+              a(href="#").link.contacts__link Codepen
             li.list__item 
-              a(href="#").contacts__link Instagram
+              a(href="#").link.contacts__link Instagram
   footer.footer
     p.footer__text All rights reserved. Built by deebov with <3. deebov &copy;
+  
