@@ -1,7 +1,8 @@
 .works
   color: $color-primary
   margin-bottom: 100px
-
+  @include respond('tablet')
+    margin-bottom: 50px
   &__list
     .list__item
       position: relative
