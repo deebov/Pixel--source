@@ -1,4 +1,5 @@
 window.addEventListener('load', (e) => {
+  
   // Define the loader element
   const loader = $('#loader');
   // Set opacity 0 to loader
@@ -10,6 +11,8 @@ window.addEventListener('load', (e) => {
 
 });
 
+
+
 // Define links to open the modal window
 const modalLinks = $('.works__link');
 
@@ -19,11 +22,32 @@ window.addEventListener("resize", updatePosition, false);
 
 // Initialize the function for modals
 modalInit();
-
+// Initialize the funcition for scrolling
+navScroll();
 
 ///////////////// HERE FUNCTIONS ARE DEFINED ////////////////////////
 
-
+// Function to scroll from navigation to the section
+function navScroll() {
+  const navLinks = $('.header__nav-link');
+  for (let i = 0; i < navLinks.length; i++) {
+    const link = navLinks[i];
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      // Get Id of the element
+      const targetId = link.getAttribute('href');
+      // Get the element from its Id
+      const target = $(targetId);
+      // Get the position of the target
+      const targetPos = getPosition(target);
+      // Scroll to the target
+      scrollFor(targetPos.x, targetPos.y);
+      
+    });
+    
+  }
+}
 // Initial function for modals
 function modalInit() {
   // Define btn fot closing the modal
@@ -168,4 +192,13 @@ function setPositionModal(x, y, modal) {
   currentModal.style.top = y + 'px';
   currentModal.style.left = x + 'px';
 
+}
+
+// Function to scroll to the adjusted position
+function scrollFor(x, y) {
+  window.scrollTo({
+    "behavior": "smooth",
+    "top": y,
+    "left": x || 0
+  });
 }
