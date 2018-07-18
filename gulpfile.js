@@ -21,7 +21,7 @@ $.path.task.forEach(function(task) {
 
 $.gulp.task('default', $.gulp.series(
   'clean',
-  $.gulp.parallel('pug', 'sass', 'js', 'copy:image', 'copy:fonts'),
+  $.gulp.parallel('pug', 'sass', 'js', 'copy:image', 'copy:fonts', 'copy:bowerFiles'),
   'inject',
   $.gulp.parallel('watcher', 'serve')
 ));
