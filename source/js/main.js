@@ -12,7 +12,6 @@ window.addEventListener('load', (e) => {
 });
 
 
-
 // Define links to open the modal window
 const modalLinks = $('.works__link');
 
@@ -25,8 +24,41 @@ modalInit();
 // Initialize the funcition for scrolling
 navScroll();
 
+typingEffect();
 ///////////////// HERE FUNCTIONS ARE DEFINED ////////////////////////
 
+// Function to add typing effect
+function typingEffect() {
+
+  const typedElements = document.querySelectorAll('[data-typed]');
+
+  setTyped(typedElements[0], {
+    strings: ['Deebov', 'Dilshod', 'Deebov'],
+    typeSpeed: 80,
+    backSpeed: 20,
+    cursorChar: '_',
+    backDelay: 3000,
+    loop: true
+  });
+
+  setTyped(typedElements[1], {
+    strings: ['Younger', 'Faster', 'Motivated'],
+    typeSpeed: 40,
+    backSpeed: 20,
+    cursorChar: '_',
+    backDelay: 3000,
+    loop: true
+  });
+  setTyped(typedElements[2], {
+    strings: ['Enthusiast', 'Responsible'],
+    typeSpeed: 40,
+    backSpeed: 20,
+    cursorChar: '_',
+    backDelay: 4000,
+    loop: true
+  }); 
+
+}
 // Function to scroll from navigation to the section
 function navScroll() {
   const navLinks = $('.header__nav-link');
@@ -175,9 +207,9 @@ function updatePosition() {
       const yPos = getPosition(currentLink).y;
       setPositionModal(xPos, yPos, modalContainer);
     }
-
-    
   }
+
+
 }
 
 // Function to get the modal element from link
@@ -201,4 +233,8 @@ function scrollFor(x, y) {
     "top": y,
     "left": x || 0
   });
+}
+
+function setTyped(elem, options = {}) {
+  const typed = new Typed(elem, options);
 }
