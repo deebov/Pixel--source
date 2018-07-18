@@ -33,12 +33,16 @@ block content
         .header__box
           p.header__text Hey!
           p.header__text I am
-          h1.heading.header__heading Deebov
+          .header__heading-box
+            h1(data-typed="1").heading.header__heading
         .header__box
           p.header__text I am also
-          h1.heading.header__heading Younger
-          h1.heading.header__heading Enthusiast
-          h1.heading.header__heading Programmer
+          .header__heading-box
+            h1(data-typed="2").heading.header__heading
+          .header__heading-box 
+            h1(data-typed="3").heading.header__heading
+          .header__heading-box 
+            h1(data-typed="4").heading.header__heading Programmer
   main.main-content
     .about#about
       .wrapper
@@ -119,17 +123,17 @@ block content
           ul.list__list
             li.list__item 
               | Email: 
-              a(href="#").link.contacts__link deebov@yandex.com
+              a(href="mailto:deebov@yandex.com").link.contacts__link deebov@yandex.com
               
             li.list__item Phone: +998 99 753 55 46
             li.list__item 
-              a(href="#").link.contacts__link LinkedIn
+              a(href="https://www.linkedin.com/in/deebov/" target="_blank").link.contacts__link LinkedIn
             li.list__item 
-              a(href="#").link.contacts__link GitHub
+              a(href="https://github.com/deebov" target="_blank").link.contacts__link GitHub
             li.list__item 
-              a(href="#").link.contacts__link Codepen
+              a(href="https://codepen.io/deebov/" target="_blank").link.contacts__link Codepen
             li.list__item 
-              a(href="#").link.contacts__link Instagram
+              a(href="https://www.instagram.com/code_deebov/" target="_blank").link.contacts__link Instagram
   footer.footer
     p.footer__text All rights reserved. Built by deebov with <3. deebov &copy;
   
