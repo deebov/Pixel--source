@@ -24,14 +24,22 @@
     transition: all .2s
     &:hover
       border-bottom: 1px solid #fff
-
+  &__heading-box
+    display: block
+    height: 50px
+  &__heading
+    display: inline-block
   &__content
     @include centered('Y')
   &__box
     display: inline-block
     vertical-align: top
+    width: 200px
     &:not(:last-child)
       margin-right: 120px
+      @include respond('mobile-l')
+        margin-right: 0 
+        margin-bottom: 30px
 
 #hamburger
   display: none  
