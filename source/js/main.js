@@ -37,6 +37,7 @@ function typingEffect() {
     typeSpeed: 80,
     backSpeed: 20,
     cursorChar: '_',
+    startDelay: 0,
     backDelay: 3000,
     loop: true
   });
@@ -237,4 +238,11 @@ function scrollFor(x, y) {
 
 function setTyped(elem, options = {}) {
   const typed = new Typed(elem, options);
+
+  elem.addEventListener('mouseover', function(e) {
+    typed.stop();
+  });
+  elem.addEventListener('mouseout', function(e) {
+    typed.start();
+  });
 }

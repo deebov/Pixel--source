@@ -3,6 +3,8 @@
   width: 100%
   height: 100vh
   padding: 0 20px
+  & *
+    user-select: none
   &__nav
     position: relative
     top: 20px
@@ -22,6 +24,7 @@
     color: #ffffff
     text-decoration: none
     transition: all .2s
+    
     &:hover
       border-bottom: 1px solid #fff
   &__heading-box
@@ -29,6 +32,7 @@
     height: 50px
   &__heading
     display: inline-block
+    cursor: text
   &__content
     @include centered('Y')
   &__box
