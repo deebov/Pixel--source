@@ -4,6 +4,8 @@ extends ./helpers/base_layout
 
 block content
   
+
+  // Loader
   .loader#loader
     .loader__content
       .loader__procces
@@ -12,6 +14,8 @@ block content
           .loader__shape
           .loader__shape
       .loader__text loading
+
+  // Header
   header.header
     .wrapper
       nav.header__nav
@@ -29,6 +33,8 @@ block content
       //-   ul.socials__list
       //-     li.socials__item
       //-       a(href="#").socials__link
+
+      // Header's main content
       main.header__content
         .header__box
           p.header__text Hey!
@@ -43,7 +49,12 @@ block content
             h1(data-typed="3").heading.header__heading
           .header__heading-box 
             h1(data-typed="4").heading.header__heading Programmer
+
+  // Site's main content
   main.main-content
+
+    // About
+
     .about#about
       .wrapper
         h1.heading.about__title About
@@ -65,63 +76,30 @@ block content
             each skill in ['Enthusiast', 'Responsible', 'Writing clean and reusable code', 'Responsive and Cross-browser design']
               li.list__item= skill
 
+    // Works
+
     .works#works
       .wrapper
         .list.works__list
           h1.heading.list__heading Works
           ul.list__list
-            li.list__item
-              a(href="#" title="Natours - Modern, fully responsive and cross-browser site").link.works__link Natours 
-              .modal
-                .modal__container
-                  .modal__top 
-                    | Natours - fully responsive, modern and cross-browser HTML site
-                    .modal__close x
-                  .modal__content
-                    img(src="assets/img/Natours.png", alt="Natours, deebov, HTML, CSS, Flexbox, modern, responsive, cross-browser").modal__img
-                    p.modal__text 
-                      | A fully responsive and cross-browser static web site, built with pure HTML and CSS (without using JavaScript) that allows many browsers to work with it well. In the site was built very modern and beautiful design features.  
-                      a(href="https://github.com/deebov/Natours--source-code-" target="_blank").link See the source code
-                    a(href="https://deebov.github.io/Natours" title="See this project" target="_blank").modal__btn See
-            li.list__item
-              a(href="#").link.works__link Trillo
-              .modal
-                .modal__container
-                  .modal__top 
-                    | Trillo - fully responsive, modern and static web site
-                    .modal__close x
-                  .modal__content
-                    img(src="assets/img/Trillo.png", alt="Trillo, deebov, HTML, CSS, Flexbox, modern, responsive, cross-browser").modal__img
-                    p.modal__text 
-                      | A fully responsive and modern static web site, built with pure HTML and CSS (without using JavaScript) that allows many browsers to work with it well. This site was built with using CSS Flexbox Layouts.In the site was built very modern and beautiful design features.
-                    a(href="#" title="See this project" target="_blank").modal__btn See
-            li.list__item
-              a(href="#").link.works__link Kinopoisk - telegram messenger bot
-              .modal
-                .modal__container
-                  .modal__top 
-                    | Kinopoisk - telegram messenger bot for looking movies and cinemas
-                    .modal__close x
-                  .modal__content
-                    img(src="assets/img/Kinopoisk.png", alt="Kinipoisk, telegram-bot, telegram, node.js, mongodb, mongoose deebov, HTML, CSS, Flexbox, modern, responsive, cross-browser").modal__img
-                    p.modal__text 
-                      | This telegram messenger bot was written on Node.js and used MongoDB for database. This bot can find for you movies and cinemas that you like and save it in its bookmark. 
-                      a(href="https://github.com/deebov/telegram-bot-for-looking-for-films" target="_blank").link See the source code
-                    a(href="http://t.me/deebov_bot" target="_blank").modal__btn See
-              
-            li.list__item
-              a(href="#").link.works__link Pixel
-              .modal
-                .modal__container
-                  .modal__top 
-                    | Pixel - fully responsive and minimal static web site
-                    .modal__close x
-                  .modal__content
-                    img(src="assets/img/Pixel.png", alt="deebov, pixel, typed.js, typing effect, vintage, pixel style, HTML, CSS, Flexbox, modern, responsive, cross-browser").modal__img
-                    p.modal__text 
-                      | Minimal and responsive site with a pretty typing effect. Minimal portfolio static site for designer, developers and who loves pixel and vintage art.
-                      a(href="https://github.com/deebov/Pixel--source" target="_blank").link See the source code
-                    a(href="https://deebov.github.io").modal__btn See
+
+            // Work list
+            each work in works
+              li.list__item
+                a(href="#" title=`${work.title}`).link.works__link= work.name
+                .modal
+                  .modal__container
+                    .modal__top 
+                      | #{work.title}
+                      .modal__close x
+                    .modal__content
+                      picture.modal__img
+                        source(srcset=`assets/img/${work.sourceImg}` media="(max-width: 600px)")
+                        img(srcset=`${work.srcset}`, alt=`${work.alt}`).modal__img
+                      p.modal__text !{work.description} !{work.sourceCode}
+                        
+                      a(href=`${work.link}` title="See this project" target="_blank").modal__btn See
 
     .contacts#contacts
       .wrapper
@@ -132,7 +110,9 @@ block content
               | Email: 
               a(href="mailto:deebov@yandex.com").link.contacts__link deebov@yandex.com
               
-            li.list__item Phone: +998 99 753 55 46
+            li.list__item 
+              | Phone: 
+              a(href="tel:+998-99-753-55-46").link +998 99 753 55 46
             li.list__item 
               a(href="https://www.linkedin.com/in/deebov/" target="_blank" title="See my LinkedIn profile").link.contacts__link LinkedIn
             li.list__item 
