@@ -61,10 +61,9 @@ block content
         p.about__text I'm Deebov and I'm 17 y.o
         p.about__text I'm Full-stack developer whose programming is his life
         p.about__text 
-          | You can see my general resume 
-          a(href="#" title="Click to see my resume").about__link here
-          |  or download 
-          a(href="#" title="Click here to download my resume").about__link here
+          | You can see and download my general resume 
+          a(href="https://yadi.sk/i/84x5RXcG3ZME4J" target="_blank" title="Click to see my resume").about__link here
+          
         .tech-skills.about__tech-skills
           h2.heading My tech skills
           ul.tech-skills__list
@@ -100,7 +99,7 @@ block content
                       p.modal__text !{work.description} !{work.sourceCode}
                         
                       a(href=`${work.link}` title="See this project" target="_blank").modal__btn See
-
+    // Contacts
     .contacts#contacts
       .wrapper
         .list.contacts__list
@@ -109,7 +108,6 @@ block content
             li.list__item 
               | Email: 
               a(href="mailto:deebov@yandex.com").link.contacts__link deebov@yandex.com
-              
             li.list__item 
               | Phone: 
               a(href="tel:+998-99-753-55-46").link +998 99 753 55 46
@@ -121,6 +119,8 @@ block content
               a(href="https://codepen.io/deebov/" target="_blank" title="See my Codepen profile").link.contacts__link Codepen
             li.list__item 
               a(href="https://www.instagram.com/code_deebov/" target="_blank" title="See my Instagram profile").link.contacts__link Instagram
+              
+  // Footer
   footer.footer
     p.footer__text 
     | All rights reserved. Built by deebov with
